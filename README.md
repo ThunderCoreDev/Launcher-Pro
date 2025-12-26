@@ -17,13 +17,13 @@ ThunderCore Launcher Pro es una solución de software empresarial diseñada espe
 
 ## ✨ Características Principales
 
-· ✅ Multi-expansión (Clásico hasta Dragonflight)
-· ✅ Multi-emulador (TrinityCore, AzerothCore, CMaNGOS, etc.)
-· ✅ Interfaz estilo Battle.Net con animaciones fluidas
-· ✅ 150+ módulos y características integradas
-· ✅ Base de datos independiente para funciones sociales
-· ✅ Sistema de actualizaciones automáticas
-· ✅ Completamente personalizable con temas CSS
+- ✅ Multi-expansión (Clásico hasta Dragonflight)
+- ✅ Multi-emulador (TrinityCore, AzerothCore, CMaNGOS, etc.)
+- ✅ Interfaz estilo Battle.Net con animaciones fluidas
+- ✅ 150+ módulos y características integradas
+- ✅ Base de datos independiente para funciones sociales
+- ✅ Sistema de actualizaciones automáticas
+- ✅ Completamente personalizable con temas CSS
 
 ## 🏗️ Arquitectura del Proyecto
 
@@ -44,98 +44,98 @@ ThunderCore-Launcher-Pro/
 
 🔐 Autenticación y Seguridad
 
-· Sistema de login con animaciones estilo Battle.Net
-· Autenticación SRP6 para todas las expansiones
-· 2FA (Autenticación de Dos Factores)
-· Historial de sesiones y detección de intrusiones
-· Recuperación de cuenta segura
+- Sistema de login con animaciones estilo Battle.Net
+- Autenticación SRP6 para todas las expansiones
+- 2FA (Autenticación de Dos Factores)
+- Historial de sesiones y detección de intrusiones
+- Recuperación de cuenta segura
 
 📊 Estadísticas en Tiempo Real
 
-· Jugadores online por facción (Alianza/Horda)
-· Uptime del servidor y latencia
-· Top PvP (Arenas/BGs) del mes
-· Top PvE (Raids/Mazmorras)
-· Estado de instancias (raids lock)
-· Gráficos de población por hora/día
-· Heatmap de actividad del servidor
+- Jugadores online por facción (Alianza/Horda)
+- Uptime del servidor y latencia
+- Top PvP (Arenas/BGs) del mes
+- Top PvE (Raids/Mazmorras)
+- Estado de instancias (raids lock)
+- Gráficos de población por hora/día
+- Heatmap de actividad del servidor
 
 👥 Sistema Social Completo
 
-· Mensajería privada entre usuarios
-· Sistema de amigos con estados online
-· Chat global del servidor
-· Buscador de guilds que reclutan
-· Sala de espera para dungeons/raids
-· Perfiles públicos personalizables
-· Comparativa con amigos
+- Mensajería privada entre usuarios
+- Sistema de amigos con estados online
+- Chat global del servidor
+- Buscador de guilds que reclutan
+- Sala de espera para dungeons/raids
+- Perfiles públicos personalizables
+- Comparativa con amigos
 
 🎯 Gestión de Personajes
 
-· Destrabar personajes atascados
-· Calculadora de talentos interactiva
-· Planificador de equipo (BiS lists)
-· Comparador de estadísticas
-· Generador de macros avanzadas
-· Historial de personajes y progreso
-· Colección de mounts/mascotas
+- Destrabar personajes atascados
+- Calculadora de talentos interactiva
+- Planificador de equipo (BiS lists)
+- Comparador de estadísticas
+- Generador de macros avanzadas
+- Historial de personajes y progreso
+- Colección de mounts/mascotas
 
 🏪 Tienda y Economía
 
-· Tienda de donaciones con carrito
-· Sistema de cupones/descuentos
-· Wishlist de items deseados
-· Paquetes especiales (bundles)
-· Historial de compras detallado
-· Integración con múltiples pasarelas
+- Tienda de donaciones con carrito
+- Sistema de cupones/descuentos
+- Wishlist de items deseados
+- Paquetes especiales (bundles)
+- Historial de compras detallado
+- Integración con múltiples pasarelas
 
 📅 Eventos y Torneos
 
-· Calendario de eventos integrado
-· Countdown para eventos programados
-· Inscripción automática a torneos
-· Sistema de premios y recompensas
-· Notificaciones push para eventos
-· Stream integrado de eventos
+- Calendario de eventos integrado
+- Countdown para eventos programados
+- Inscripción automática a torneos
+- Sistema de premios y recompensas
+- Notificaciones push para eventos
+- Stream integrado de eventos
 
 🛠️ Herramientas Avanzadas
 
-· Auto-parcheador inteligente
-· Descarga automática del cliente
-· Verificador de integridad de archivos
-· Selector de addons integrado
-· Limpiador de cache WDB automático
-· Optimizador de configuración WoW
-· Diagnosticador de problemas
+- Auto-parcheador inteligente
+- Descarga automática del cliente
+- Verificador de integridad de archivos
+- Selector de addons integrado
+- Limpiador de cache WDB automático
+- Optimizador de configuración WoW
+- Diagnosticador de problemas
 
 🏆 Sistema de Progresión
 
-· Login diario con recompensas acumulativas
-· Niveles del launcher (XP por actividades)
-· Insignias/títulos por logros
-· Misiones del launcher diarias/semanales
-· Cofres sorpresa aleatorios
-· Programa de referidos (trae amigos)
+- Login diario con recompensas acumulativas
+- Niveles del launcher (XP por actividades)
+- Insignias/títulos por logros
+- Misiones del launcher diarias/semanales
+- Cofres sorpresa aleatorios
+- Programa de referidos (trae amigos)
 
 🎨 Personalización Visual
 
-· Temas personalizables (oscuro, claro, colores)
-· Fondos animados personalizados
-· Sonidos personalizables
-· Widgets arrastrables
-· Efectos de partículas
-· Modo compacto/expandido
-· Ajustes de transparencia
+- Temas personalizables (oscuro, claro, colores)
+- Fondos animados personalizados
+- Sonidos personalizables
+- Widgets arrastrables
+- Efectos de partículas
+- Modo compacto/expandido
+- Ajustes de transparencia
 
 👑 Panel de Administración
 
-· Gestor de tickets de soporte
-· Sistema de anuncios push masivos
-· Ban manager visual
-· Monitor de actividad sospechosa
-· Log viewer en tiempo real
-· Herramienta de restauración de personajes
-· Estadísticas detalladas del servidor
+- Gestor de tickets de soporte
+- Sistema de anuncios push masivos
+- Ban manager visual
+- Monitor de actividad sospechosa
+- Log viewer en tiempo real
+- Herramienta de restauración de personajes
+- Estadísticas detalladas del servidor
 
 ## 📋 Pre-requisitos de Instalación
 
@@ -378,12 +378,11 @@ Configurar Widgets Personalizados
 
 Problemas Comunes
 
-Problema Solución
-Error de conexión a MySQL Verificar credenciales y puerto 3306
-Launcher no se inicia Instalar VC++ Redistributable
-Texto distorsionado Actualizar drivers de gráficos
-Sin sonido Verificar Qt Multimedia
-Lento al cargar Aumentar memoria en config.ini
+- Error de conexión a MySQL: Verificar credenciales y puerto 3306
+- Launcher no se inicia: Instalar VC++ Redistributable
+- Texto distorsionado: Actualizar drivers de gráficos
+- Sin sonido: Verificar Qt Multimedia
+- Lento al cargar: Aumentar memoria en config.ini
 
 Logs y Diagnóstico
 
@@ -444,49 +443,50 @@ la Free Software Foundation, ya sea la versión 3 de la Licencia, o
 
 Desarrolladores Principales
 
-· Lead Developer: [ThunderCoreDev]
+- Lead Developer: [ThunderCoreDev]
 
 ## Tecnologías Utilizadas
 
-· Qt 6: Framework para la interfaz gráfica
-· MySQL 8: Base de datos principal
-· CMake: Sistema de construcción
-· JSON for Modern C++: Manipulación JSON
-· spdlog: Sistema de logging
-· FontAwesome: Iconos
+- Qt 6: Framework para la interfaz gráfica
+- MySQL 8: Base de datos principal
+- CMake: Sistema de construcción
+- JSON for Modern C++: Manipulación JSON
+- spdlog: Sistema de logging
+- FontAwesome: Iconos
 
 ## Agradecimientos Especiales
 
-· Comunidad de TrinityCore y AzerothCore
-· Todos los testers beta que ayudaron a mejorar
-· La increíble comunidad de ThunderCore WoW
+- Comunidad de TrinityCore y AzerothCore
+- Todos los testers beta que ayudaron a mejorar
+- La increíble comunidad de ThunderCore WoW
 
 ## 📞 Soporte y Contacto
 
-· Email: devthundercore@gmail.com
-· Issues de GitHub: Reportar Bug
+- Email: devthundercore@gmail.com
+- Issues de GitHub: Reportar Bug
 
 ## Estado del Servicio
 
-![](https://img.shields.io/badge/Estado-Activo-green.svg)
-![](https://img.shields.io/badge/Actualizaciones-Periodicas-rose.svg)
+![](https://img.shields.io/uptimerobot/status/m793916803-2a4a6c2c7c1c6b3c3c3c3c3c)
+![](https://img.shields.io/uptimerobot/response/m793916803-2a4a6c2c7c1c6b3c3c3c3c3c)
 
 ## 🌟 Características Próximas
 
 En Desarrollo
 
-· App móvil companion
-· Integración con Discord Rich Presence
-· Sistema de clans cross-server
-· Marketplace de items entre jugadores
-· AI Assistant para nuevos jugadores
+- App móvil companion
+- Integración con Discord Rich Presence
+- Sistema de clans cross-server
+- Marketplace de items entre jugadores
+- AI Assistant para nuevos jugadores
 
 Planeado
 
-· Replays de arenas/BGs
-· Simulador de raids 3D
-· Sistema de torneos automático
-· Machine Learning para detección de trampas
+- Streaming integrado (Twitch/YouTube)
+- Replays de arenas/BGs
+- Simulador de raids 3D
+- Sistema de torneos automático
+- Machine Learning para detección de trampas
 
 ---
 
