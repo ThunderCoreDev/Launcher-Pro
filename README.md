@@ -467,8 +467,7 @@ Desarrolladores Principales
 
 ## Estado del Servicio
 
-![](https://img.shields.io/uptimerobot/status/m793916803-2a4a6c2c7c1c6b3c3c3c3c3c)
-![](https://img.shields.io/uptimerobot/response/m793916803-2a4a6c2c7c1c6b3c3c3c3c3c)
+![](https://img.shields.io/badge/Estado-Activo-green)
 
 ## 🌟 Características Próximas
 
