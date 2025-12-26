@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <!-- Imágenes -->
+        <file>images/logo.png</file>
+        <file>images/background.png</file>
+        <file>images/icons/home.png</file>
+        <file>images/icons/characters.png</file>
+        <file>images/icons/social.png</file>
+        <file>images/icons/events.png</file>
+        <file>images/icons/store.png</file>
+        <file>images/icons/tools.png</file>
+        <file>images/icons/settings.png</file>
+        <file>images/icons/play.png</file>
+        <file>images/icons/exit.png</file>
+        
+        <!-- Estilos -->
+        <file>styles/theme_battlenet.qss</file>
+        <file>styles/theme_dark.qss</file>
+        <file>styles/theme_light.qss</file>
+        
+        <!-- Sonidos -->
+        <file>sounds/login.wav</file>
+        <file>sounds/notification.wav</file>
+        <file>sounds/click.wav</file>
+        
+        <!-- Fuentes -->
+        <file>fonts/OpenSans-Regular.ttf</file>
+        <file>fonts/OpenSans-Bold.ttf</file>
+    </qresource>
+</RCC>
