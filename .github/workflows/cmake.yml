@@ -17,11 +17,11 @@ jobs:
     - name: Install Qt
       uses: jurplel/install-qt-action@v3
       with:
-        version: '6.4.2'
+        version: '6.5.3'
         host: 'windows'
         target: 'desktop'
         arch: 'win64_msvc2019_64'
-        modules: 'qtmultimedia qtwebengine qtwebsockets'
+        modules: 'qtwebengine qtmultimedia qtwebsockets'
 
     - name: Install CMake
       run: choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System' -y
@@ -34,6 +34,7 @@ jobs:
 
     - name: Configure project
       run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release ^
+        -DCMAKE_PREFIX_PATH="D:/a/Launcher-Pro/Qt/6.5.3/msvc2019_64" ^
         -DMySQL_INCLUDE_DIR="${{ github.workspace }}/mysql-connector-c-6.1.11-winx64/include" ^
         -DMySQL_LIBRARY="${{ github.workspace }}/mysql-connector-c-6.1.11-winx64/lib/libmysql.lib"
 
