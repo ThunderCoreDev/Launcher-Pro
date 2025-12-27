@@ -1,4 +1,4 @@
-name: CMake Build
+name: CMake Build (Windows)
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Checkout repository
@@ -16,15 +16,9 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt-get update
-        sudo apt-get install -y cmake g++ \
-          qt6-base-dev qt6-base-dev-tools \
-          qt6-multimedia-dev qt6-tools-dev \
-          qt6-svg-dev qt6-websockets-dev \
-          qt6-webengine-dev qt6-webenginewidgets-dev \
-          qt6-serialport-dev qt6-positioning-dev \
-          qt6-declarative-dev qt6-charts-dev \
-          libxkbcommon-dev
+        choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System' -y
+        choco install qt6-default -y
+        choco install mysql -y
 
     - name: Configure project
       run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
@@ -33,4 +27,4 @@ jobs:
       run: cmake --build build --config Release
 
     - name: Run executable (optional)
-      run: ./build/LauncherPro
+      run: .\build\Release\LauncherPro.exe
