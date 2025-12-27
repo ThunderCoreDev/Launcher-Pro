@@ -17,7 +17,7 @@ jobs:
     - name: Install Qt
       uses: jurplel/install-qt-action@v3
       with:
-        version: '6.5.3'
+        version: '6.6.2'
         host: 'windows'
         target: 'desktop'
         arch: 'win64_msvc2019_64'
@@ -33,9 +33,9 @@ jobs:
         echo "Connector/C unpacked"
 
     - name: Configure project
-      run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release ^
-        -DCMAKE_PREFIX_PATH="D:/a/Launcher-Pro/Qt/6.5.3/msvc2019_64" ^
-        -DMySQL_INCLUDE_DIR="${{ github.workspace }}/mysql-connector-c-6.1.11-winx64/include" ^
+      run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release `
+        -DCMAKE_PREFIX_PATH="D:/a/Launcher-Pro/Qt/6.6.2/msvc2019_64" `
+        -DMySQL_INCLUDE_DIR="${{ github.workspace }}/mysql-connector-c-6.1.11-winx64/include" `
         -DMySQL_LIBRARY="${{ github.workspace }}/mysql-connector-c-6.1.11-winx64/lib/libmysql.lib"
 
     - name: Build project
