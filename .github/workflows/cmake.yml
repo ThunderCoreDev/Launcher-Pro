@@ -18,7 +18,10 @@ jobs:
       uses: jurplel/install-qt-action@v3
       with:
         version: '6.4.2'
-        modules: 'qtbase qtwebengine qtmultimedia qtwebsockets qtsvg'
+        host: 'windows'
+        target: 'desktop'
+        arch: 'win64_msvc2019_64'
+        modules: 'qtmultimedia qtwebengine qtwebsockets qtsvg'
 
     - name: Install CMake
       run: choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System' -y
