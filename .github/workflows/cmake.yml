@@ -26,8 +26,8 @@ jobs:
     - name: Install CMake
       run: choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System' -y
 
-    - name: Install MySQL Connector/C
-      run: choco install mysql-connector-c -y
+    - name: Install MySQL Connector/C++
+      run: choco install mysql-connector-cpp -y
 
     - name: Configure project
       run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
