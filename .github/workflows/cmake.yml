@@ -21,7 +21,7 @@ jobs:
         host: 'windows'
         target: 'desktop'
         arch: 'win64_msvc2019_64'
-        modules: 'qtmultimedia qtwebengine qtwebsockets qtsvg'
+        modules: 'qtmultimedia qtwebengine qtwebsockets'
 
     - name: Install CMake
       run: choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System' -y
