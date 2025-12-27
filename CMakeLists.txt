@@ -11,7 +11,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-# Buscar Qt6
+# Buscar Qt6 obligatorio
 find_package(Qt6 REQUIRED COMPONENTS
     Core
     Gui
@@ -21,7 +21,13 @@ find_package(Qt6 REQUIRED COMPONENTS
     Multimedia
     WebSockets
     Concurrent
+    PrintSupport
 )
+
+# Buscar Qt6 opcional
+find_package(Qt6 COMPONENTS WebEngineWidgets QUIET)
+find_package(Qt6 COMPONENTS WebChannel QUIET)
+find_package(Qt6 COMPONENTS Charts QUIET)
 
 # Buscar MySQL
 find_package(MySQL REQUIRED)
@@ -52,75 +58,31 @@ include_directories(
 )
 
 # Archivos fuente principales
-set(MAIN_SOURCES
-    src/main.cpp
-)
+set(MAIN_SOURCES src/main.cpp)
 
-# Archivos del núcleo
-set(CORE_SOURCES
-    core/Application.cpp
-    core/Settings.cpp
-    core/Logger.cpp
-)
+# Núcleo
+set(CORE_SOURCES core/Application.cpp core/Settings.cpp core/Logger.cpp)
+set(CORE_HEADERS core/Application.h core/Settings.h core/Logger.h core/Singleton.h)
 
-set(CORE_HEADERS
-    core/Application.h
-    core/Settings.h
-    core/Logger.h
-    core/Singleton.h
-)
+# UI
+set(UI_SOURCES ui/MainWindow.cpp ui/LoginWindow.cpp ui/DashboardWindow.cpp)
+set(UI_HEADERS ui/MainWindow.h ui/LoginWindow.h ui/DashboardWindow.h)
 
-# Archivos de UI
-set(UI_SOURCES
-    ui/MainWindow.cpp
-    ui/LoginWindow.cpp
-    ui/DashboardWindow.cpp
-)
+# Base de datos
+set(DATABASE_SOURCES database/DatabaseManager.cpp)
+set(DATABASE_HEADERS database/DatabaseManager.h)
 
-set(UI_HEADERS
-    ui/MainWindow.h
-    ui/LoginWindow.h
-    ui/DashboardWindow.h
-)
-
-# Archivos de base de datos
-set(DATABASE_SOURCES
-    database/DatabaseManager.cpp
-)
-
-set(DATABASE_HEADERS
-    database/DatabaseManager.h
-)
-
-# Archivos de recursos
-set(RESOURCE_FILES
-    resources/resources.qrc
-)
+# Recursos
+set(RESOURCE_FILES resources/resources.qrc)
 
 # Combinar todas las fuentes
-set(ALL_SOURCES
-    ${MAIN_SOURCES}
-    ${CORE_SOURCES}
-    ${UI_SOURCES}
-    ${DATABASE_SOURCES}
-    ${RESOURCE_FILES}
-)
-
-set(ALL_HEADERS
-    ${CORE_HEADERS}
-    ${UI_HEADERS}
-    ${DATABASE_HEADERS}
-)
-
+set(ALL_SOURCES ${MAIN_SOURCES} ${CORE_SOURCES} ${UI_SOURCES} ${DATABASE_SOURCES} ${RESOURCE_FILES})
+set(ALL_HEADERS ${CORE_HEADERS} ${UI_HEADERS} ${DATABASE_HEADERS})
 
 # Crear ejecutable
-add_executable(ThunderCore-Launcher-Pro
-    ${ALL_SOURCES}
-    ${ALL_HEADERS}
-    ${ALL_RESOURCES}
-)
+add_executable(ThunderCore-Launcher-Pro ${ALL_SOURCES} ${ALL_HEADERS})
 
-# Enlazar bibliotecas
+# Enlazar bibliotecas obligatorias
 target_link_libraries(ThunderCore-Launcher-Pro
     Qt6::Core
     Qt6::Gui
@@ -128,25 +90,30 @@ target_link_libraries(ThunderCore-Launcher-Pro
     Qt6::Network
     Qt6::Sql
     Qt6::Multimedia
-    Qt6::WebEngineWidgets
-    Qt6::WebChannel
     Qt6::WebSockets
-    Qt6::Charts
     Qt6::Concurrent
     Qt6::PrintSupport
     ${MySQL_LIBRARIES}
     Threads::Threads
 )
 
+# Enlazar bibliotecas opcionales si existen
+if (TARGET Qt6::WebEngineWidgets)
+    target_link_libraries(ThunderCore-Launcher-Pro PRIVATE Qt6::WebEngineWidgets)
+endif()
+
+if (TARGET Qt6::WebChannel)
+    target_link_libraries(ThunderCore-Launcher-Pro PRIVATE Qt6::WebChannel)
+endif()
+
+if (TARGET Qt6::Charts)
+    target_link_libraries(ThunderCore-Launcher-Pro PRIVATE Qt6::Charts)
+endif()
+
 # Configuración específica de Windows
 if(WIN32)
-    target_link_libraries(ThunderCore-Launcher-Pro
-        ws2_32
-        crypt32
-        winmm
-    )
-    
-    # Configurar icono
+    target_link_libraries(ThunderCore-Launcher-Pro ws2_32 crypt32 winmm)
+
     if(EXISTS "${CMAKE_SOURCE_DIR}/resources/images/icon.ico")
         set_target_properties(ThunderCore-Launcher-Pro PROPERTIES
             WIN32_EXECUTABLE TRUE
@@ -165,8 +132,7 @@ if(APPLE)
         MACOSX_BUNDLE_SHORT_VERSION_STRING "${PROJECT_VERSION}"
         MACOSX_BUNDLE_INFO_PLIST "${CMAKE_SOURCE_DIR}/cmake/macos/Info.plist"
     )
-    
-    # Añadir frameworks necesarios para macOS
+
     target_link_libraries(ThunderCore-Launcher-Pro
         "-framework CoreFoundation"
         "-framework Security"
@@ -182,14 +148,14 @@ set_target_properties(ThunderCore-Launcher-Pro PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
 )
 
-# Copiar archivos de configuración post-build
+# Copiar archivos post-build
 add_custom_command(TARGET ThunderCore-Launcher-Pro POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
     "${CMAKE_SOURCE_DIR}/config"
     "$<TARGET_FILE_DIR:ThunderCore-Launcher-Pro>/../config"
     COMMENT "Copying configuration files..."
 )
-# Copiar recursos
+
 add_custom_command(TARGET ThunderCore-Launcher-Pro POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
     "${CMAKE_SOURCE_DIR}/resources"
